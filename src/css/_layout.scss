@@ -8,6 +8,41 @@ body {
     background-color: $bg;
 }
 
+.website {
+    max-width: 1920px;
+    min-width: 320px;
+    margin: 0 auto;
+
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.header-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+
+    .fixed-container {
+        max-width: 1920px;
+        min-width: 320px;
+        margin: 0 auto;
+
+        background-color: #c9c9c9;
+    }
+}
+
+.content {
+    padding-top: 55px;
+}
+
+.footer {
+    background-color: #c9c9c9;
+}
+
 .container {
     margin: 0 auto;
 
