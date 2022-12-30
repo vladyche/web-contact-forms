@@ -1,0 +1,44 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    background-color: $bg;
+}
+
+.container {
+    margin: 0 auto;
+
+    min-width: 320px;
+    max-width: 1920px;
+
+    @include media-breakpoint-only(xxl) {
+        max-width: 1320px;
+    }
+
+    @include media-breakpoint-only(xl) {
+        max-width: 1140px;
+    }
+
+    @include media-breakpoint-only(lg) {
+        max-width: 960px;
+    }
+
+    @include media-breakpoint-only(md) {
+        max-width: 720px;
+    }
+
+    @include media-breakpoint-only(sm) {
+        max-width: 540px;
+    }
+
+    @include media-breakpoint-only(xs) {
+        max-width: 100%;
+    }
+
+    .row {
+        padding: 0 15px;
+    }
+}
