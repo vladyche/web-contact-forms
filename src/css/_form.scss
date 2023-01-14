@@ -91,11 +91,14 @@
 }
 
 .error-info {
-    // padding-top: 2px;
+    height: 15px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 
     .message {
-        height: 15px;
-
         font-size: 10px;
         color: #800000;
         text-align: right;
