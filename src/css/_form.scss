@@ -1,25 +1,35 @@
-.cf {
+.contact-form {
     width: 300px;
     margin: 55px auto 0;
-    position: relative;
 }
 
-.fieldset {
-    margin: 0;
-    padding: 10px;
+.cf {}
 
-    border: 1px solid #550000;
+.form {
 
-    .legend {
-        margin: 0 auto;
-        color: #550000;
-        font-size: 12px;
-        text-transform: uppercase;
+    .fieldset {
+        margin: 0;
+        padding: 10px;
+
+        border: 1px solid #550000;
+
+        .legend {
+            margin: 0 auto;
+            color: #550000;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
     }
 }
 
 .cf-container {
     padding-top: 5px;
+
+    .flds {}
+
+    .sbmt {
+        padding-top: 10px;
+    }
 }
 
 // field
@@ -122,10 +132,6 @@
     }
 }
 
-.sbmt {
-    padding-top: 10px;
-}
-
 .cf-submit {
     text-align: center;
 
@@ -135,8 +141,9 @@
 
         text-transform: uppercase;
         color: #550000;
-        border: 1px solid #550000;
         font-size: 12px;
+
+        border: 1px solid #550000;
 
         margin: 0;
         padding: 5px;
@@ -145,32 +152,3 @@
         cursor: pointer;
     }
 }
-
-
-// preloader
-.preloader {
-    background: #000;
-
-    opacity: 0;
-    transition: opacity .2s;
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.display {
-    display: flex;
-}
-
-.visible {
-    opacity: 1;
-}
-
-// end preloader

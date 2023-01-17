@@ -30,7 +30,7 @@
                                 <nav class="header-nav">
                                     <ul class="header-menu">
                                         <li class="item">
-                                            <a href="" class="link">
+                                            <a href="./about.html" class="link">
                                                 <div class="header-menu-item">
                                                     <span>About</span>
                                                 </div>
@@ -38,7 +38,7 @@
                                         </li>
 
                                         <li class="item">
-                                            <a href="" class="link">
+                                            <a href="./settings.html" class="link">
                                                 <div class="header-menu-item">
                                                     <span>Settings</span>
                                                 </div>
@@ -46,7 +46,7 @@
                                         </li>
 
                                         <li class="item">
-                                            <a href="" class="link">
+                                            <a href="./contacts.html" class="link">
                                                 <div class="header-menu-item">
                                                     <span>Contact</span>
                                                 </div>
@@ -73,106 +73,159 @@
                     <div class="page-content">
 
                         <!-- contact form -->
-                        <form action="#" class="cf" method="post">
-                            <fieldset class="fieldset">
-                                <legend class="legend">CallBack</legend>
+                        <div class="contact-form">
+                            <form action="#" id="cf1" class="form" method="post">
+                                <fieldset class="fieldset">
+                                    <legend class="legend">CallBack</legend>
 
-                                <div class="cf-container">
-                                    <div class="flds">
-                                        <div class="cf-flds">
-                                            <div class="fld">
-                                                <!-- label -->
-                                                <div>
-                                                    <div class="fld-label">
-                                                        <div class="label">
-                                                            <label for="name">Name</label>
-                                                        </div>
+                                    <div class="cf-container">
+                                        <div class="flds">
+                                            <div class="cf-flds">
+                                                <div class="fld">
+                                                    <!-- label -->
+                                                    <div>
+                                                        <div class="fld-label">
+                                                            <div class="label">
+                                                                <label for="name">Name</label>
+                                                            </div>
 
-                                                        <div class="e">
-                                                            <div class="error">
-                                                                <div class="message">
-                                                                    Name is incorrect
+                                                            <div class="e">
+                                                                <div class="error name-error">
+                                                                    <div class="message"></div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <!-- end label -->
+                                                    <!-- end label -->
 
-                                                <!-- input -->
-                                                <div>
-                                                    <div class="fld-input">
-                                                        <input name="name" type="text" placeholder="Enter Name">
-                                                    </div>
-
-                                                    <div class="error-info">
-                                                        <div class="message">
-                                                            2 - 20 letters, first must be capital
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- end input -->
-                                            </div>
-
-                                            <div class="fld">
-                                                <!-- label -->
-                                                <div>
-                                                    <div class="fld-label">
-                                                        <div class="label">
-                                                            <label for="email">Email</label>
+                                                    <!-- input -->
+                                                    <div>
+                                                        <div class="fld-input">
+                                                            <input name="name" type="text" placeholder="Enter Name">
                                                         </div>
 
-                                                        <div class="e">
-                                                            <div class="error">
-                                                                <div class="message">
-                                                                    Email is incorrect
+                                                        <div class="error-info name-error-info">
+                                                            <div class="message"></div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end input -->
+                                                </div>
+
+                                                <div class="fld">
+                                                    <!-- label -->
+                                                    <div>
+                                                        <div class="fld-label">
+                                                            <div class="label">
+                                                                <label for="email">Email</label>
+                                                            </div>
+
+                                                            <div class="e">
+                                                                <div class="error email-error">
+                                                                    <div class="message"></div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <!-- end label -->
+                                                        <!-- end label -->
 
-                                                <!-- input -->
-                                                <div>
-                                                    <div class="fld-input">
-                                                        <input name="email" type="text" placeholder="Enter Email">
-                                                    </div>
+                                                        <!-- input -->
+                                                        <div>
+                                                            <div class="fld-input">
+                                                                <input name="email" type="text"
+                                                                    placeholder="Enter Email">
+                                                            </div>
 
-                                                    <div class="error-info">
-                                                        <div class="message">
-                                                            format example@email.com
+                                                            <div class="error-info email-error-info">
+                                                                <div class="message"></div>
+                                                            </div>
                                                         </div>
+                                                        <!-- end input -->
                                                     </div>
                                                 </div>
-                                                <!-- end input -->
+                                            </div>
+                                        </div>
+
+                                        <div class="sbmt">
+                                            <div class="cf-submit">
+                                                <button class="btn">Submit</button>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="sbmt">
-                                        <div class="cf-submit">
-                                            <button class="btn">Submit</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </fieldset>
+                                </fieldset>
+                            </form>
 
                             <div class="preloader">
-                                <div>
-                                    <div>
-                                        <div class="progression"></div>
-                                    </div>
+                                <div class="preloader-container">
+                                    <ul class="preloader-modes">
+                                        <li class="mode send-mode">
+                                            <div>
+                                                <div class="loadingio-spinner-spinner-peyoolinpg">
+                                                    <div class="ldio-382j4ril2tv">
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
 
-                                    <div>
-                                        <div class="message"></div>
-                                        <div class="close">
-                                            <button class="btn">close</button>
-                                        </div>
-                                    </div>
+                                        <li class="mode success-mode">
+                                            <div class="preloader-message">
+                                                <div class="message">Sent</div>
+                                            </div>
+
+                                            <div class="close">
+                                                <div class="preloader-close">
+                                                    <button class="btn">close</button>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="mode error-mode">
+                                            <div class="preloader-message">
+                                                <div class="message"></div>
+
+                                                <div class="error-link">
+                                                    <div>
+                                                        visit contact page
+                                                    </div>
+
+                                                    <div>
+                                                        <a href="./contacts.html" class="link">contact</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="close">
+                                                <div class="preloader-close">
+                                                    <button class="btn">close</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                         <!-- end contact form -->
 
                     </div>
@@ -192,7 +245,7 @@
                     <nav class="footer-nav">
                         <ul class="footer-menu">
                             <li class="item">
-                                <a href="" class="link">
+                                <a href="./about.html" class="link">
                                     <div class="footer-menu-item">
                                         <span>About</span>
                                     </div>
@@ -200,7 +253,7 @@
                             </li>
 
                             <li class="item">
-                                <a href="" class="link">
+                                <a href="./settings.html" class="link">
                                     <div class="footer-menu-item">
                                         <span>Settings</span>
                                     </div>
@@ -208,7 +261,7 @@
                             </li>
 
                             <li class="item">
-                                <a href="" class="link">
+                                <a href="./contacts.html" class="link">
                                     <div class="footer-menu-item">
                                         <span>Contact</span>
                                     </div>
