@@ -1,11 +1,13 @@
-const form = document.querySelector('.contact-form > .form');
+const form = document.querySelector('.contact-form > #cf1');
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', formHandler);
+
+function formHandler(e) {
     e.preventDefault();
 
-    //elements value
-    const nameElementValue = form.elements['name'].value;
-    const emailElementValue = form.elements['email'].value;
+    //data from form elements
+    const nameElementValue = this.elements['name'].value;
+    const emailElementValue = this.elements['email'].value;
 
     // validation
     let name = nameValidation(nameElementValue);
@@ -24,10 +26,15 @@ form.addEventListener('submit', (e) => {
         //clear field
         clearFields();
     }
-});
+}
 
 //name validation
 function nameValidation(name) {
+
+    //clear error message info if name is valid
+    nameErrorInfo = document.querySelector('.name-error-info > .message');
+    nameErrorInfo.innerHTML = "";
+
     const pattern = /[A-Z][a-z]+/;
 
     let error = pattern.test(name);
@@ -43,6 +50,11 @@ function nameValidation(name) {
 
 //email validation
 function emailValidation(email) {
+
+    //clear error message info if email is valid
+    emailErrorInfo = document.querySelector('.email-error-info > .message');
+    emailErrorInfo.innerHTML = "";
+
     const pattern = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
 
     let error = pattern.test(email);
@@ -87,6 +99,7 @@ function emailInput() {
 }
 // end clear error messages
 
+// error messages
 const errorMessages = {
     nameError: "Name is incorrect",
     nameErrorInfo: "more then one letters, first must be capital",

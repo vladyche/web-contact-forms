@@ -150,5 +150,14 @@
         background: none;
 
         cursor: pointer;
+
+        &:focus {
+            outline: 1px solid #009909
+        }
+
+        &:active {
+            color: none;
+            outline: none;
+        }
     }
 }
