@@ -28,12 +28,13 @@ form.addEventListener('submit', (e) => {
 
 //name validation
 function nameValidation(name) {
+    const pattern = /[A-Z][a-z]+/;
 
-    // regexp result validation
-    let error = false;
+    let error = pattern.test(name);
 
-    if (error) {
+    if (!error) {
         nameErrorMessage();
+        nameInput();
         return false;
     }
 
@@ -42,21 +43,53 @@ function nameValidation(name) {
 
 //email validation
 function emailValidation(email) {
+    const pattern = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
 
-    // regexp result validation
-    let error = false;
+    let error = pattern.test(email);
 
-    if (error) {
+    if (!error) {
         emailErrorMessage();
+        emailInput();
         return false;
     }
 
     return true;
 }
 
+// clear error messages
+function nameInput() {
+    const nameInput = document.querySelector('.fld-input > input[name="name"]');
+    const error = document.querySelector('#cf1 .name-error > .message');
+    nameInput.addEventListener('input', remove);
+
+    function remove() {
+        error.innerHTML = "";
+
+        if (error.innerText.length == 0) {
+            nameInput.removeEventListener('input', remove);
+        }
+    }
+}
+
+function emailInput() {
+    const emailInput = document.querySelector('.fld-input > input[name="email"]');
+    const error = document.querySelector('#cf1 .email-error > .message');
+
+    emailInput.addEventListener('input', remove);
+
+    function remove() {
+        error.innerHTML = "";
+
+        if (error.innerText.length == 0) {
+            emailInput.removeEventListener('input', remove);
+        }
+    }
+}
+// end clear error messages
+
 const errorMessages = {
     nameError: "Name is incorrect",
-    nameErrorInfo: "2 - 20 letters, first must be capital",
+    nameErrorInfo: "more then one letters, first must be capital",
     emailError: "Email is incorrect",
     emailErrorInfo: "format example@email.com"
 }
@@ -155,8 +188,25 @@ function preloaderMode(prms) {
     }
 })();
 
+(function clearErrorMessage() {
+    const successModeMessage = document.querySelector('.success-mode > .preloader-message > .message');
+    const errorModeMessage = document.querySelector('.error-mode > .preloader-message > .message');
+    const link = document.querySelector('.preloader-message > .error-link .link');
+
+    link.addEventListener('click', function () {
+        successModeMessage.innerHTML = "";
+        errorModeMessage.innerHTML = "";
+    });
+})();
+
 //clear form fields
 function clearFields() {
+    nameErrorInfo = document.querySelector('.name-error-info > .message');
+    emailErrorInfo = document.querySelector('.email-error-info > .message');
+
+    nameErrorInfo.innerHTML = "";
+    emailErrorInfo.innerHTML = "";
+
     form.reset();
 }
 
